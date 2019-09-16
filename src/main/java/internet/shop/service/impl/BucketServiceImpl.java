@@ -39,8 +39,7 @@ public class BucketServiceImpl implements BucketService {
 
     @Override
     public Bucket addItem(Bucket bucket, Item item) {
-        Item retrievedItem = itemDao.get(item.getId());
-        bucket.getItems().add(retrievedItem);
+        bucket.getItems().add(itemDao.get(item.getId()));
         return bucketDao.update(bucket);
     }
 

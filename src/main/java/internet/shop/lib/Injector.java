@@ -45,7 +45,7 @@ public class Injector {
 
     public static void injectDependencies() throws IllegalAccessException {
         injectDaoDependencies(classesContainDaoFields, Dao.class);
-        injectDaoDependencies(classesContainServiceFields, Provider.Service.class);
+        injectDaoDependencies(classesContainServiceFields, Service.class);
     }
 
     private static void injectDaoDependencies(List<Class> classesContainInjectedFields,
